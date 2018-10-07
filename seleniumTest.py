@@ -35,7 +35,7 @@ with open('meenabazar_feature.csv', mode='w',encoding="utf-8",newline='') as mee
     for product,price in zip(productName,productPrice):
         id+=1
         print(product.getText().strip()+' '+price.getText().strip())
-        meenabazar_feature.writerow([ str(id),product.getText().strip(),price.getText().strip(),strftime("%Y-%m-%d", gmtime())])
+        meenabazar_feature.writerow([ str(id),product.getText().strip(),price.getText().strip().split()[1]+'TK',strftime("%Y-%m-%d", gmtime())])
         
     
     
